@@ -99,22 +99,23 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form id="signupForm">
+        <form id="signupForm" method="post" action="/signup">
+          <!-- Removed action attribute -->
           <div class="mb-3">
-            <labelclass="form-label">Username</label>
-            <input type="text" class="form-control" id="username">
+            <label class="form-label">Username</label>
+            <input type="text" class="form-control" id="username" required>
           </div>
           <div class="mb-3">
-            <labelclass="form-label">Name</label>
-            <input type="text" class="form-control" id="name">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" required>
           </div>
           <div class="mb-3">
-            <labelclass="form-label">Email</label>
-            <input type="text" class="form-control" id="email">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" required>
           </div>
           <div class="mb-3">
             <label class="form-label">Password</label>
-            <input type="text" class="form-control" id="password">
+            <input type="password" class="form-control" id="password" required>
           </div>
           <div class="mb-3">
             <label class="form-label">Address</label>
@@ -130,6 +131,7 @@
     </div>
   </div>
 </div>
+
 
 <!-- Toast Container -->
 <div class="toast-container position-fixed bottom-0 end-0 p-3" >
