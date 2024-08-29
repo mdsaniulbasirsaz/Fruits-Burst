@@ -41,7 +41,7 @@ app.get('/allfruits', (req, res) => {
 // Signup Schema
 const userSchema = new mongoose.Schema({
     name: String,
-    email: String,
+    // email: String,
     address: String,
     phone: String
 });
@@ -52,15 +52,13 @@ module.exports = User;
 
 app.post('/signup', async (req, res) => {
     try {
-        const { name, email, address, phone } = req.body;
+        const { name, address, phone } = req.body;
 
         
         // Create and save the new user
-        const newUser = new User({ name, email, address, phone });
+        const newUser = new User({ name, address, phone });
         await newUser.save();
 
-        // Respond with success message
-        res.status(201).json({ message: 'User registered successfully!', email: newUser.email });
     } catch (error) {
         console.error('Error registering user:', error);  // Log the error to the console
         res.status(500).json({ error: 'Internal server error' });
