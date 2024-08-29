@@ -81,19 +81,15 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
   event.preventDefault(); // Prevent the default form submission
 
   // Get form values
-  const username = document.getElementById('username').value;
   const name = document.getElementById('name').value;
   const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
   const address = document.getElementById('address').value;
   const phone = document.getElementById('phone').value;
 
   // Create an object with form data
   const formData = {
-    username,
     name,
     email,
-    password,
     address,
     phone
   };
